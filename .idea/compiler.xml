@@ -17,7 +17,7 @@
     <bytecodeTargetLevel>
       <module name="api" target="11" />
       <module name="product-composite-service" target="11" />
-      <module name="product-microservices" target="16" />
+      <module name="product-microservices" target="11" />
       <module name="product-service" target="11" />
       <module name="recommendation-service" target="11" />
       <module name="review-service" target="11" />
