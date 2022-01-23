@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/api/api.iml" filepath="$PROJECT_DIR$/product-microservices/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/microservices/product-composite-service/product-composite-service.iml" filepath="$PROJECT_DIR$/product-microservices/microservices/product-composite-service/product-composite-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/product-microservices.iml" filepath="$PROJECT_DIR$/product-microservices/product-microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/microservices/product-service/product-service.iml" filepath="$PROJECT_DIR$/product-microservices/microservices/product-service/product-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/microservices/recommendation-service/recommendation-service.iml" filepath="$PROJECT_DIR$/product-microservices/microservices/recommendation-service/recommendation-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/microservices/review-service/review-service.iml" filepath="$PROJECT_DIR$/product-microservices/microservices/review-service/review-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-microservices/util/util.iml" filepath="$PROJECT_DIR$/product-microservices/util/util.iml" />
+    </modules>
+  </component>
+</project>
