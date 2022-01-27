@@ -1,5 +1,8 @@
 package io.anjola.util.exceptions.http;
 
+import io.anjola.util.exceptions.BadRequestException;
+import io.anjola.util.exceptions.InternalServerException;
+import io.anjola.util.exceptions.InvalidInputException;
 import io.anjola.util.exceptions.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +21,27 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NotFoundException.class)
     public @ResponseBody HttpErrorInfo handleNotFoundException(ServerHttpRequest request, Exception ex){
         return createHttpErrorInfo(HttpStatus.NOT_FOUND, request, ex);
+    }
+
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    @ExceptionHandler(InvalidInputException.class)
+    public @ResponseBody
+    HttpErrorInfo handleInvalidInputException(ServerHttpRequest request, Exception ex) {
+        return createHttpErrorInfo(HttpStatus.UNPROCESSABLE_ENTITY, request, ex);
+    }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(BadRequestException.class)
+    public @ResponseBody
+    HttpErrorInfo handleBadRequestException(ServerHttpRequest request, Exception ex) {
+        return createHttpErrorInfo(HttpStatus.BAD_REQUEST, request, ex);
+    }
+
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(InternalServerException.class)
+    public @ResponseBody
+    HttpErrorInfo handleInternalServerException(ServerHttpRequest request, Exception ex) {
+        return createHttpErrorInfo(HttpStatus.INTERNAL_SERVER_ERROR, request, ex);
     }
 
     private HttpErrorInfo createHttpErrorInfo(HttpStatus httpStatus, ServerHttpRequest request, Exception ex) {
