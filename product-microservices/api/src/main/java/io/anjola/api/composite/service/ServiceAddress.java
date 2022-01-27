@@ -2,25 +2,38 @@ package io.anjola.api.composite.service;
 
 public class ServiceAddress {
 
-    private final int recommendationId;
-    private final String author;
-    private final int rate;
+    private final String compositeAddress;
+    private final String productAddress;
+    private final String reviewAddress;
+    private final String recommendationAddress;
 
-    public ServiceAddress(int recommendationId, String author, int rate) {
-        this.recommendationId = recommendationId;
-        this.author = author;
-        this.rate = rate;
+    public ServiceAddress() {
+        compositeAddress = null;
+        productAddress = null;
+        reviewAddress = null;
+        recommendationAddress = null;
     }
 
-    public int getRecommendationId() {
-        return recommendationId;
+    public ServiceAddress(String compositeAddress, String productAddress, String reviewAddress, String recommendationAddress) {
+        this.compositeAddress = compositeAddress;
+        this.productAddress = productAddress;
+        this.reviewAddress = reviewAddress;
+        this.recommendationAddress = recommendationAddress;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getCompositeAddress() {
+        return compositeAddress;
     }
 
-    public int getRate() {
-        return rate;
+    public String getProductAddress() {
+        return productAddress;
+    }
+
+    public String getReviewAddress() {
+        return reviewAddress;
+    }
+
+    public String getRecommendationAddress() {
+        return recommendationAddress;
     }
 }
