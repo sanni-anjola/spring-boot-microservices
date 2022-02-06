@@ -26,3 +26,9 @@ This project is created little by little with each branch for difficulty level. 
 docker-compose build
 docker-compose up -d
 ```
+
+### Swagger API Documentation
+Visit the API documentation at
+```shell
+http://localhost:8080/swagger-ui/index.html
+```
