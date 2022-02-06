@@ -16,9 +16,14 @@ public class RecommendationController implements RecommendationService {
 
     private static final Logger LOG = LoggerFactory.getLogger(RecommendationController.class);
 
+    private final RecommendationRepoService repoService;
+    private final RecommendationMapper mapper;
     private final ServiceUtil serviceUtil;
 
-    public RecommendationController(ServiceUtil serviceUtil) {
+
+    public RecommendationController(RecommendationRepoService repoService, RecommendationMapper mapper, ServiceUtil serviceUtil) {
+        this.repoService = repoService;
+        this.mapper = mapper;
         this.serviceUtil = serviceUtil;
     }
 
